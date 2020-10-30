@@ -1,4 +1,3 @@
-const xToken = "ujCbcTuNWda8HwiaGeLlMO0jxweDle8AuUau6-EBKfgY";
 const usdRateBuy     = document.getElementById('usdRateBuy');
 const usdRateSell    = document.getElementById('usdRateSell');
 const eurRateBuy     = document.getElementById('eurRateBuy');
@@ -83,37 +82,7 @@ fetch("https://api.monobank.ua/bank/currency")
     
         textBuySell = getTextBuySell(buy);
         currencyPrice = getCurencyPrice(buy, indexOfCurrency);
-        // switch (buy) {
-        //     case true:
-        //         textBuySell = "купівлі";
-        //         switch (indexOfCurrency) {
-        //             case 0:
-        //                 currencyPrice = usdRateBuy.textContent;
-        //                 break;
-        //             case 1:
-        //                 currencyPrice = eurRateBuy.textContent;
-        //                 break;
-        //             case 2:
-        //                 currencyPrice = gpbRateBuy.textContent;
-        //                 break;
-        //         }
-        //         break;
-        //     case false:
-        //         textBuySell = "продажу";
-        //         switch (indexOfCurrency) {
-        //             case 0:
-        //                 currencyPrice = usdRateSell.textContent;
-        //                 break;
-        //             case 1:
-        //                 currencyPrice = eurRateSell.textContent;
-        //                 break;
-        //             case 2:
-        //                 currencyPrice = gpbRateSell.textContent;
-        //                 break;
-        //         }
-        //         break;
-        //     }
-    
+        
         result = (val * currencyPrice).toFixed('2');
     
         document.getElementById('result').innerHTML = `Для ${textBuySell} ${val} ${descriptionOfCurrency} необхідно: ${result} грн.`;
