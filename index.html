@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="currency-exchange">
+    <h2 class="header">Курси валют</h2>
+    <table id="table-currency">
+      <tr>
+        <th>Валюта</th>
+        <th>Продажа</th>
+        <th>Купівля</th>
+      </tr>
+      <tr>
+        <td id="usd">&#36; (USD)</td>
+        <td id="usdRateSell"></td>
+        <td id="usdRateBuy"></td>
+      </tr>
+      <tr>
+        <td id="eur">&euro; (EUR)</td>
+        <td id="eurRateSell"></td>
+        <td id="eurRateBuy"></td>
+      </tr>
+      <tr>
+        <td id="gpb">&pound; (GPB)</td>
+        <td id="gpbRateSell"></td>
+        <td id="gpbRateBuy"></td>
+      </tr>
+  
+    </table>
+  </div>
+
+  <div id="currency-calculation">
+    <h2 class="header">Розрахунок купівлі/продажу</h2>
+    <div id="input">
+      <select id="selectCurrency">
+        <option>&#36; (USD)</option>
+        <option>&euro; (EUR)</option>
+        <option>&pound; (GPB)</option>
+      </select>
+
+      <input type="text" id="input-value">
+      <button id="buy_button">Купити</button>
+      <button id="sel_button">Продати</button>
+    </div>
+    <div id="result"></div>
+    <br>
+
+  </div>
+
+  <script src="main.js"></script> 
+</body>
+</html>
